@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  session-timeout: 30  
+  tomcat.max-threads: 0  
+  tomcat.uri-encoding: UTF-8
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.100.200.107:3306/b2b?characterEncoding=UTF-8 
+    username: gq_b2b
+    password: 123456
+#    driverClassName: org.h2.Driver
+#    url: jdbc:h2:mem:orca;MODE=Oracle;DB_CLOSE_DELAY=-1
+#    username: sa
+#    password: sa
+  freemarker:
+      suffix: .html
+liquibase:
+  change-log: classpath:db-changelog.xml
+logging:
+  level:
+    com.encsoft.demo: DEBUG
+    org.springframework: INFO
